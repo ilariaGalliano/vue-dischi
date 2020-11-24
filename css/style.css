@@ -9,6 +9,7 @@
 body {
   font-family: 'Lato', sans-serif;
   color: #fff;
+  background: #192d3c;
 }
 img{
   max-width: 100%;
@@ -19,15 +20,11 @@ img{
   background: #2b3a47;
 }
 .header-app img{
-  max-width: 80px;
+  max-width: 70px;
   padding: 10px 10px 4px;
 }
 
 /* Main */
-.main-app{
-  background: #192d3c;
-}
-
 /* Main - music options */
 .options{
   text-align: center;
@@ -41,32 +38,29 @@ img{
 .list{
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-wrap: wrap;
-  padding: 40px 10px;
   list-style: none;
 }
 .list-album{
-  flex-basis: 150px;
-  height: 400px;
+  flex-basis: 155px;
   background: #2b3a47;
-  margin-right: 20px;
-  margin-bottom: 15px;
+  margin: 10px 11px;
+  padding: 15px;
   text-align: center;
 }
 .list-album img{
-  max-width: 100%;
-  padding: 16px;
+  height: 120px;
 }
 .list-album .title{
   text-transform: uppercase;
   margin: 20px 0;
-  padding: 0 8px;
-  font-size: 22px;
+  font-size: 20px;
 }
 .list-album .author,
 .list-album .year{
-  font-size: 20px;
   color: gray;
-  margin: 15px 0;
+  margin-bottom: 15px;
+}
+.list-album .author{
+  font-size: 18px;
 }

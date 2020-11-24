@@ -1,12 +1,12 @@
 /**
- * VUE JS API
+ * VUE JS API MUSIC
  */
 
 const app = new Vue({
     el: '#app',
     data: {
         albums: [],
-
+        actualMusic: 'all'
     },
     created(){
 
@@ -20,5 +20,20 @@ const app = new Vue({
     },
     methods: {
 
-   }
+          chooseTypeMusic(){
+            axios.get('https://flynn.boolean.careers/exercises/api/array/music')
+              .then(result => {
+                let albumList = result.data.response;
+
+                if (this.actualMusic !== 'all') {
+                  albumList = albumList.filter( el => el.genre.toLowerCase() === this.actualMusic );
+                }
+
+                this.albums = albumList;
+              })
+
+              .catch(error => { console.log('errore:', error); })
+
+          }
+    }
 });
