@@ -1,0 +1,72 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Layout */
+body {
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+}
+img{
+  max-width: 100%;
+}
+
+/* Header */
+.header-app{
+  background: #2b3a47;
+}
+.header-app img{
+  max-width: 80px;
+  padding: 10px 10px 4px;
+}
+
+/* Main */
+.main-app{
+  background: #192d3c;
+}
+
+/* Main - music options */
+.options{
+  text-align: center;
+  padding: 50px 0;
+}
+.options select{
+  margin-left: 15px;
+}
+
+/* Main - album section */
+.list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 10px;
+  list-style: none;
+}
+.list-album{
+  flex-basis: 150px;
+  height: 400px;
+  background: #2b3a47;
+  margin-right: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.list-album img{
+  max-width: 100%;
+  padding: 16px;
+}
+.list-album .title{
+  text-transform: uppercase;
+  margin: 20px 0;
+  padding: 0 8px;
+  font-size: 22px;
+}
+.list-album .author,
+.list-album .year{
+  font-size: 20px;
+  color: gray;
+  margin: 15px 0;
+}

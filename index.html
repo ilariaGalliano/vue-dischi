@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Vue dischi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Vue JS -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+
+      <!-- Header -->
+      <header class="header-app">
+          <img src="./img/logo.png" alt="spotify">
+      </header>
+
+      <!-- Main -->
+      <main class="main-app">
+
+        <!-- Music options -->
+        <div class="options"> Filter by gendre:
+          <select>
+            <option value="all">All</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="jazz">Jazz</option>
+          </select>
+        </div>
+
+        <!-- Album section -->
+        <section class="album-section">
+          <ul class="list">
+            <li class="list-album" v-for="album in albums">
+              <img :src="album.poster" :alt="album.title">
+              <h3 class="title">{{ album.title }}</h3>
+              <div class="author">{{ album.author }}</div>
+              <div class="year">{{ album.year }}</div>
+              <div class="genre">{{ album.genre }}</div>
+            </li>
+          </ul>
+        </section>
+
+
+      </main>
+
+
+
+    </div>
+
+    <!-- Axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- Js -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
